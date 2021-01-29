@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/page")
 public class PageController {
 
+
 	@RequestMapping("/register")
 	public String showRegister() {
 		return "register";
@@ -24,6 +25,7 @@ public class PageController {
 	@RequestMapping("/login")
 	public String showLogin(String redirect, Model model) {
 		model.addAttribute("redirect", redirect);
+
 		return "login";
 	}
 }
